@@ -27,9 +27,9 @@ with io.open(os.path.join("baidubce", "__init__.py"), "rt") as f:
     SDK_VERSION = re.search(r"SDK_VERSION = b'(.*?)'", f.read()).group(1)
 
 setup(
-    name='bce-python-sdk',
+    name='bce-python-sdk-reborn',
     version=SDK_VERSION,
-    install_requires=['pycrypto>=2.4',
+    install_requires=['pycryptodome>=3.9.8',
                       'future>=0.6.0',
                       'six>=1.4.0'],
     python_requires='>=2.7, !=3.0.*, !=3.1.*, !=3.2.*, <4',
